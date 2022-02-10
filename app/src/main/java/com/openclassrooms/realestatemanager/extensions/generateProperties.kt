@@ -3,10 +3,12 @@ package com.openclassrooms.realestatemanager.extensions
 import com.openclassrooms.realestatemanager.models.PointsOfInterests
 import com.openclassrooms.realestatemanager.models.Property
 import com.openclassrooms.realestatemanager.models.PropertyTypes
+import java.util.*
 
 fun generateProperties() : List<Property> {
     return listOf(
-        Property(id = "1",
+        Property(
+            id = "1",
             type = PropertyTypes.FLAT,
             price = 169000,
             area = 900,
@@ -27,12 +29,15 @@ fun generateProperties() : List<Property> {
             city = "Manhathan",
             postalCode = "NY 10111",
             country = "USA",
+            latitude = 40.7589408497391,
+            longitude = -73.97983110154246,
             pointOfInterest = listOf(PointsOfInterests.SCHOOL, PointsOfInterests.PARK),
             available = true,
-            //saleDate = Calendar.getInstance().set(2021, 5, 20) as Calendar,
+            saleDate = Calendar.getInstance().also { it.set(2021, 5, 20) },
             agentName = "John McLaughlin"
         ),
-        Property(id = "2",
+        Property(
+            id = "2",
             type = PropertyTypes.FLAT,
             price = 379000,
             area = 1800,
@@ -57,12 +62,15 @@ fun generateProperties() : List<Property> {
             city = "Manhathan",
             postalCode = "NY 10022",
             country = "USA",
+            latitude = 40.759524542858905,
+            longitude = -73.9648487396234,
             pointOfInterest = listOf(PointsOfInterests.GROCERY, PointsOfInterests.PARK, PointsOfInterests.SWIMMING_POOL),
             available = true,
             //saleDate = Calendar.getInstance().set(2021, 5, 20) as Calendar,
             agentName = "Kristen Fortino"
         ),
-        Property(id = "3",
+        Property(
+            id = "3",
             type = PropertyTypes.HOUSE,
             price = 478500,
             area = 1892,
@@ -92,12 +100,15 @@ fun generateProperties() : List<Property> {
             city = "Staten Island",
             postalCode = "NY 10312",
             country = "USA",
+            latitude = 40.55390377650278,
+            longitude = -74.19467206015342,
             pointOfInterest = listOf(PointsOfInterests.SCHOOL, PointsOfInterests.TRAIN_STATION, PointsOfInterests.PUBLIC_TRANSPORT),
             available = true,
             //saleDate = Calendar.getInstance().set(2021, 5, 20) as Calendar,
             agentName = "Douglas Elliman"
         ),
-        Property(id = "4",
+        Property(
+            id = "4",
             type = PropertyTypes.TRIPLEX,
             price = 66000000,
             area = 7130,
@@ -119,12 +130,15 @@ fun generateProperties() : List<Property> {
             city = "Manhathan",
             postalCode = "NY 10019",
             country = "USA",
+            latitude = 40.76482158883576,
+            longitude = -73.97782416556161,
             pointOfInterest = listOf(PointsOfInterests.SCHOOL, PointsOfInterests.PARK, PointsOfInterests.GROCERY, PointsOfInterests.FITNESS_CLUB),
             available = true,
             //saleDate = Calendar.getInstance().set(2021, 5, 20) as Calendar,
             agentName = "Douglas Elliman"
         ),
-        Property(id = "5",
+        Property(
+            id = "5",
             type = PropertyTypes.HOUSE,
             price = 453200,
             area = 2168,
@@ -141,12 +155,15 @@ fun generateProperties() : List<Property> {
             city = "Brooklyn",
             postalCode = "NY 11433",
             country = "USA",
+            latitude = 40.697167874862615,
+            longitude = -73.78038285309472,
             pointOfInterest = listOf(PointsOfInterests.GROCERY, PointsOfInterests.PUBLIC_TRANSPORT),
             available = true,
             //saleDate = Calendar.getInstance().set(2021, 5, 20) as Calendar,
             agentName = "John McLaughlin"
         ),
-        Property(id = "6",
+        Property(
+            id = "6",
             type = PropertyTypes.FLAT,
             price = 295000,
             area = 800,
@@ -162,12 +179,15 @@ fun generateProperties() : List<Property> {
             city = "Harlem",
             postalCode = "NY 10031",
             country = "USA",
+            latitude = 40.82568643585645,
+            longitude = -73.94261050737286,
             pointOfInterest = listOf(PointsOfInterests.SCHOOL, PointsOfInterests.PUBLIC_TRANSPORT, PointsOfInterests.FITNESS_CLUB),
             available = true,
             //saleDate = Calendar.getInstance().set(2021, 5, 20) as Calendar,
             agentName = "Kristen Fortino"
         ),
-        Property(id = "7",
+        Property(
+            id = "7",
             type = PropertyTypes.DUPLEX,
             price = 1795000,
             area = 3228,
@@ -189,9 +209,11 @@ fun generateProperties() : List<Property> {
                 "https://photos.zillowstatic.com/fp/f2dfb51bae1056b64b772e3b504928b5-cc_ft_384.jpg"
             ),
             address = "651 Leonard St",
-            city = "Eastpoint",
+            city = "Greenpoint",
             postalCode = "NY 11222",
             country = "USA",
+            latitude = 40.7267017136229,
+            longitude = -73.95191893544883,
             pointOfInterest = listOf(PointsOfInterests.SCHOOL, PointsOfInterests.PUBLIC_TRANSPORT, PointsOfInterests.FITNESS_CLUB),
             available = true,
             //saleDate = Calendar.getInstance().set(2021, 5, 20) as Calendar,
