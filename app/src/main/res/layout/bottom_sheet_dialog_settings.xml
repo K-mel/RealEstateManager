@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding"
+    android:background="@color/white"
+    tools:context=".ui.list.settings.SettingsBottomSheetDialog">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/settings_bottom_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/settings"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="22sp"/>
+
+        <ImageButton
+            android:id="@+id/settings_bottom_save_ib"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_check"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            android:contentDescription="@string/apply_settings"
+            app:tint="@color/colorAccent" />
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:id="@+id/settings_bottom_unit_iv"
+                style="@style/iIcon"
+                android:layout_width="@dimen/default_icon_size"
+                android:layout_height="@dimen/default_icon_size"
+                android:contentDescription="@string/unit"
+                android:layout_marginTop="@dimen/default_margin"
+                android:src="@drawable/ic_unit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/settings_bottom_unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:text="@string/unit"
+                app:layout_constraintBottom_toBottomOf="@+id/settings_bottom_unit_iv"
+                app:layout_constraintStart_toEndOf="@+id/settings_bottom_unit_iv"
+                app:layout_constraintTop_toTopOf="@+id/settings_bottom_unit_iv"
+                style="@style/textTitle" />
+
+            <RadioGroup
+                android:id="@+id/settings_bottom_unit_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                app:layout_constraintStart_toStartOf="@+id/settings_bottom_unit_tv"
+                app:layout_constraintTop_toBottomOf="@id/settings_bottom_unit_iv">
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/settings_bottom_currency_iv"
+                style="@style/iIcon"
+                android:layout_width="@dimen/default_icon_size"
+                android:layout_height="@dimen/default_icon_size"
+                android:layout_marginTop="@dimen/default_margin"
+                android:contentDescription="@string/property_type"
+                android:src="@drawable/ic_money"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/settings_bottom_unit_rg" />
+
+            <TextView
+                android:id="@+id/settings_bottom_currency_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:text="@string/currency"
+                app:layout_constraintBottom_toBottomOf="@+id/settings_bottom_currency_iv"
+                app:layout_constraintStart_toEndOf="@+id/settings_bottom_currency_iv"
+                app:layout_constraintTop_toTopOf="@+id/settings_bottom_currency_iv"
+                style="@style/textTitle" />
+
+            <RadioGroup
+                android:id="@+id/settings_bottom_currency_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                app:layout_constraintStart_toStartOf="@+id/settings_bottom_currency_tv"
+                app:layout_constraintTop_toBottomOf="@id/settings_bottom_currency_iv">
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

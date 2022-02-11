@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/activity_add_property_media_size"
+    android:layout_height="@dimen/activity_add_property_media_size"
+    android:layout_margin="2dp"
+    app:cardUseCompatPadding="true">
+
+    <ImageView
+        android:id="@+id/activity_add_property_media_item_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/media"
+        tools:srcCompat="@sample/properties" />
+
+    <ImageView
+        android:id="@+id/activity_add_property_video_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_video"
+        android:visibility="gone"
+        android:contentDescription="@string/media" />
+
+    <ImageButton
+        android:id="@+id/activity_add_property_delete_ibtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@null"
+        android:src="@drawable/ic_delete"
+        android:layout_gravity="end|top"
+        android:contentDescription="@string/remove_media" />
+
+    <TextView
+        android:id="@+id/activity_add_property_media_item_tv"
+        style="@style/detailMediaText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:text="@sample/properties.json/names/media_name/value" />
+</androidx.cardview.widget.CardView>
