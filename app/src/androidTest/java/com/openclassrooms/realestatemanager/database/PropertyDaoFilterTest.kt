@@ -301,7 +301,7 @@ class PropertyDaoFilterTest{
         launch(Dispatchers.Main) {
             val propertyFilter = PropertyFilter(
                 available = true,
-                postDate = 1621500768764) // 20 may 2021
+                postDate = 1621500768764) // 8 February 2022
 
             val queryString = constructSqlQuery(propertyFilter)
             val query = SimpleSQLiteQuery(queryString)
@@ -332,7 +332,7 @@ class PropertyDaoFilterTest{
         launch(Dispatchers.Main) {
             val propertyFilter = PropertyFilter(
                 sold = true,
-                soldDate = 1631184830000)  // 9 september 2021
+                soldDate = 1631184830000)  // 8 February 2022
 
             val queryString = constructSqlQuery(propertyFilter)
             val query = SimpleSQLiteQuery(queryString)
@@ -361,7 +361,7 @@ class PropertyDaoFilterTest{
                 bedroomsAmount = 2,
                 mediasAmount = 2,
                 available = true,
-                postDate = 1612483200000) // 5 February 2021
+                postDate = 1612483200000) // 8 February 2022
 
             val queryString = constructSqlQuery(propertyFilter)
             val query = SimpleSQLiteQuery(queryString)
@@ -390,7 +390,7 @@ class PropertyDaoFilterTest{
                 bedroomsAmount = 1,
                 mediasAmount = 3,
                 sold = true,
-                soldDate = 1628294400000) // 7 August 2021
+                soldDate = 1628294400000) // 8 February 2022
 
             val queryString = constructSqlQuery(propertyFilter)
             val query = SimpleSQLiteQuery(queryString)

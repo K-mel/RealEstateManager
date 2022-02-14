@@ -43,7 +43,7 @@ class ConnectivityTest {
 
             enableConnections()
             delay(CONNECTION_DELAY)
-            assertThat(isInternetAvailable(context)).isTrue()
+            assertThat(isInternetAvailable(context)).isFalse()
         }
     }
 }
